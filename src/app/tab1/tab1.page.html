@@ -7,9 +7,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
- 
+
+  <ion-list *ngFor="let quote of quotes">
+    <ion-card  class="ion-padding">
+      <ion-card-content>
+        <p>
+          {{quote.text}}
+        </p>
+      </ion-card-content>
+          <div>
+            <p class="ion-text-end quote-person" >-{{quote.person}}</p>
+          </div>
+          <div class="ion-text-center" >
+            <ion-button (click)="onRemoveQuoteFromFavorite(quote)" fill="clear" color="danger">Unfavorite</ion-button>
+          </div>
+
+    </ion-card>
+  </ion-list>
 
 
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

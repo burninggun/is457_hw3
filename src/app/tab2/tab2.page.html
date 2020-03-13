@@ -14,6 +14,7 @@
 	<ion-list *ngFor="let quoteGroup of quoteCollection">
 		<!-- <ion-item> -->
 		<ion-label>
+			<ion-icon [name] ="quoteGroup.icon"></ion-icon>
 			<h2>{{quoteGroup.category | uppercase}}</h2>
 			<p>{{quoteGroup.quotes?.length}} quotes</p>
 			<ion-list *ngFor="let quote of quoteGroup.quotes">
